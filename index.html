@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Пасхальная сводка инцидентов</title>
+    <meta
+      name="description"
+      content="Мобильный лендинг для ролевого ивента: тёмный неон, пасхальный хаос, лента новостей и ручная проверка результата кубика."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="ambient ambient-left" aria-hidden="true"></div>
+      <div class="ambient ambient-right" aria-hidden="true"></div>
+      <div class="spring-particles" aria-hidden="true">
+        <span>✦</span>
+        <span>🐇</span>
+        <span>✦</span>
+        <span>🥚</span>
+        <span>✦</span>
+        <span>🐣</span>
+      </div>
+
+      <header class="site-header">
+        <div class="date-chip" id="dateChip">[ динамическая дата ]</div>
+        <p class="greeting-line" id="greetingLine">[ приветствие ]</p>
+        <div class="hero-panel">
+          <p class="eyebrow" id="heroEyebrow">[ подзаголовок ]</p>
+          <h1 class="glitch-title" id="heroTitle" data-text="[ заголовок ]">
+            [ заголовок ]
+          </h1>
+          <p class="hero-copy" id="heroCopy">
+            [ вводный текст ]
+          </p>
+        </div>
+        <section class="event-briefing" aria-labelledby="briefingTitle">
+          <div class="briefing-head">
+            <p class="section-kicker" id="briefingKicker">[ кикер пояснения ]</p>
+            <h2 id="briefingTitle">[ заголовок пояснения ]</h2>
+          </div>
+          <p class="briefing-lead" id="briefingLead">[ вводный текст ]</p>
+          <div class="briefing-grid" id="briefingGrid"></div>
+          <p class="briefing-note" id="briefingNote">[ важная заметка ]</p>
+        </section>
+      </header>
+
+      <main class="main-content">
+        <section class="panel panel-news" aria-labelledby="newsHeading">
+          <div class="section-heading">
+            <p class="section-kicker" id="newsKicker">[ раздел новостей ]</p>
+            <h2 id="newsHeading">[ заголовок новостей ]</h2>
+            <p class="section-note" id="newsNote">[ подпись новостей ]</p>
+          </div>
+          <div class="news-feed" id="newsFeed"></div>
+        </section>
+
+        <section class="panel panel-dice" aria-labelledby="diceHeading">
+          <div class="section-heading">
+            <p class="section-kicker" id="diceKicker">[ раздел кубика ]</p>
+            <h2 id="diceHeading">[ заголовок кубика ]</h2>
+          </div>
+
+          <div class="dice-controls">
+            <label class="dice-label" id="diceLabel" for="diceRange"><span id="diceLabelText">[ подпись кубика ]</span> <span id="diceValue">10</span></label>
+            <input
+              class="dice-slider"
+              id="diceRange"
+              type="range"
+              min="1"
+              max="20"
+              step="1"
+              value="10"
+            />
+            <p class="dice-helper" id="diceHelper">[ подсказка кубика ]</p>
+            <div class="dice-quick-picks" id="diceQuickPicks" aria-label="Быстрый выбор значений"></div>
+          </div>
+
+          <article class="dice-result" id="diceResult" aria-live="polite"></article>
+        </section>
+
+        <section class="panel panel-calendar calendar-panel" aria-labelledby="calendarHeading">
+            <div class="section-heading">
+              <p class="section-kicker" id="calendarKicker">[ кикер календаря ]</p>
+              <h2 class="calendar-title" id="calendarHeading">[ заголовок календаря ]</h2>
+              <p class="calendar-copy" id="calendarCopy">[ описание календаря ]</p>
+            </div>
+            <div class="calendar-grid" id="calendarGrid"></div>
+            <div class="calendar-dropdown" id="calendarDropdown">
+              <p class="calendar-dropdown-label" id="calendarDropdownLabel">[ подпись списка ]</p>
+              <div class="calendar-content" id="calendarContent"></div>
+            </div>
+        </section>
+
+      </main>
+
+      <footer class="site-footer">
+        <p class="footer-message" id="footerMessage">[ сообщение футера ]</p>
+        <p class="footer-hotline" id="footerHotline">[ номер линии ]</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
