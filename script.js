@@ -256,6 +256,78 @@ function isInsideShape(painter, point) {
   return painter.ctx.isPointInPath(path, point.x, point.y);
 }
 
+function isInsideCakeInteractionZone(painter, point) {
+  if (painter.config.shape !== "cake") {
+    return isInsideShape(painter, point);
+  }
+
+  const bodyPath = buildCakePath(painter.width, painter.height);
+  const icingPath = buildCakeIcingPath(painter.width, painter.height);
+
+  if (
+    painter.ctx.isPointInPath(bodyPath, point.x, point.y) ||
+    painter.ctx.isPointInPath(icingPath, point.x, point.y)
+  ) {
+    return true;
+  }
+
+  if (typeof painter.ctx.isPointInStroke !== "function") {
+    return false;
+  }
+
+  painter.ctx.save();
+  painter.ctx.lineWidth = Math.max(18, painter.width * 0.06);
+  painter.ctx.lineJoin = "round";
+  painter.ctx.lineCap = "round";
+
+  const isNearVisibleEdge =
+    painter.ctx.isPointInStroke(bodyPath, point.x, point.y) ||
+    painter.ctx.isPointInStroke(icingPath, point.x, point.y);
+
+  painter.ctx.restore();
+
+  return isNearVisibleEdge;
+}
+
+function movePointToward(point, target, width, height, ratio) {
+  const x = point.x + (target.x - point.x) * ratio;
+  const y = point.y + (target.y - point.y) * ratio;
+
+  return {
+    x,
+    y,
+    nx: x / width,
+    ny: y / height,
+  };
+}
+
+function resolveSprinklePoint(painter, point) {
+  if (isInsideShape(painter, point)) {
+    return point;
+  }
+
+  if (painter.config.shape !== "cake" || !isInsideCakeInteractionZone(painter, point)) {
+    return null;
+  }
+
+  const center = {
+    x: painter.width * 0.5,
+    y: painter.height * 0.56,
+  };
+
+  let candidate = point;
+
+  for (let step = 0; step < 14; step += 1) {
+    candidate = movePointToward(candidate, center, painter.width, painter.height, 0.18);
+
+    if (isInsideShape(painter, candidate)) {
+      return candidate;
+    }
+  }
+
+  return null;
+}
+
 function getDefaultStatus(painter) {
   if (painter.mode === "eraser") {
     return painter.config.statusEraser || painter.config.statusBrush;
@@ -553,13 +625,16 @@ function continueBrush(painter, point) {
 }
 
 function placeSprinkle(painter, point) {
-  if (!isInsideShape(painter, point)) {
+  const resolvedPoint = resolveSprinklePoint(painter, point);
+
+  if (!resolvedPoint) {
+    setPainterStatus(painter, "Посыпка ставится по видимой форме кулича.");
     return;
   }
 
   painter.sprinkles.push({
-    x: point.nx,
-    y: point.ny,
+    x: resolvedPoint.nx,
+    y: resolvedPoint.ny,
     emoji: painter.currentEmoji,
     rotation: (Math.random() - 0.5) * 0.8,
     scale: 0.9 + Math.random() * 0.3,
