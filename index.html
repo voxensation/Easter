@@ -6,7 +6,7 @@
     <title>Пасхальная сводка инцидентов</title>
     <meta
       name="description"
-      content="Мобильный лендинг для ролевого ивента: тёмный неон, пасхальный хаос, лента новостей и ручная проверка результата кубика."
+      content="Мобильный лендинг для ролевого ивента: тёмный неон и две пасхальные рисовалки с экспортом в JPG."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -53,52 +53,140 @@
       </header>
 
       <main class="main-content">
-        <section class="panel panel-news" aria-labelledby="newsHeading">
+        <section class="panel studio-intro" aria-labelledby="studioHeading">
           <div class="section-heading">
-            <p class="section-kicker" id="newsKicker">[ раздел новостей ]</p>
-            <h2 id="newsHeading">[ заголовок новостей ]</h2>
-            <p class="section-note" id="newsNote">[ подпись новостей ]</p>
+            <p class="section-kicker" id="studioKicker">[ раздел студии ]</p>
+            <h2 id="studioHeading">[ заголовок студии ]</h2>
+            <p class="section-note" id="studioNote">[ подпись студии ]</p>
           </div>
-          <div class="news-feed" id="newsFeed"></div>
+          <div class="studio-pill-row" id="studioPills" aria-hidden="true"></div>
         </section>
 
-        <section class="panel panel-dice" aria-labelledby="diceHeading">
+        <section class="panel painter-panel" data-painter="egg" aria-labelledby="eggHeading">
           <div class="section-heading">
-            <p class="section-kicker" id="diceKicker">[ раздел кубика ]</p>
-            <h2 id="diceHeading">[ заголовок кубика ]</h2>
+            <p class="section-kicker" data-role="kicker">[ кикер рисовалки ]</p>
+            <h2 id="eggHeading" data-role="title">[ заголовок рисовалки ]</h2>
+            <p class="section-note" data-role="note">[ описание рисовалки ]</p>
           </div>
+          <div class="painter-layout">
+            <div class="painter-stage">
+              <canvas
+                class="painter-canvas"
+                data-role="canvas"
+                width="360"
+                height="420"
+              ></canvas>
+            </div>
+            <div class="painter-tools">
+              <div class="tool-group">
+                <p class="tool-label">Режим</p>
+                <div class="segmented-controls" data-role="mode-controls">
+                  <button class="mode-button" type="button" data-mode="brush">Кисть</button>
+                  <button class="mode-button" type="button" data-mode="eraser">Ластик</button>
+                  <button class="mode-button" type="button" data-mode="text">Текст</button>
+                  <button class="mode-button" type="button" data-mode="sprinkle">Посыпка</button>
+                </div>
+              </div>
 
-          <div class="dice-controls">
-            <label class="dice-label" id="diceLabel" for="diceRange"><span id="diceLabelText">[ подпись кубика ]</span> <span id="diceValue">10</span></label>
-            <input
-              class="dice-slider"
-              id="diceRange"
-              type="range"
-              min="1"
-              max="20"
-              step="1"
-              value="10"
-            />
-            <p class="dice-helper" id="diceHelper">[ подсказка кубика ]</p>
-            <div class="dice-quick-picks" id="diceQuickPicks" aria-label="Быстрый выбор значений"></div>
+              <div class="tool-group">
+                <p class="tool-label">Цвет</p>
+                <div class="palette-grid" data-role="color-palette"></div>
+                <label class="color-custom">
+                  <span>Свой цвет</span>
+                  <input data-role="color-input" type="color" value="#ffc6df" />
+                </label>
+              </div>
+
+              <div class="tool-group">
+                <p class="tool-label">Пожелание</p>
+                <label class="text-custom">
+                  <textarea
+                    class="text-input"
+                    data-role="text-input"
+                    rows="3"
+                    maxlength="120"
+                    placeholder="Введите пожелание и в режиме &quot;Текст&quot; нажмите по открытке"
+                  ></textarea>
+                </label>
+              </div>
+
+              <div class="tool-group">
+                <p class="tool-label">Посыпка</p>
+                <div class="emoji-grid" data-role="emoji-palette"></div>
+              </div>
+
+              <div class="tool-actions">
+                <button class="ghost-button" data-action="clear" type="button">Очистить</button>
+                <button class="primary-button" data-action="download" type="button">Скачать JPG</button>
+              </div>
+
+              <p class="tool-status" data-role="status">[ статус ]</p>
+            </div>
           </div>
-
-          <article class="dice-result" id="diceResult" aria-live="polite"></article>
         </section>
 
-        <section class="panel panel-calendar calendar-panel" aria-labelledby="calendarHeading">
-            <div class="section-heading">
-              <p class="section-kicker" id="calendarKicker">[ кикер календаря ]</p>
-              <h2 class="calendar-title" id="calendarHeading">[ заголовок календаря ]</h2>
-              <p class="calendar-copy" id="calendarCopy">[ описание календаря ]</p>
+        <section class="panel painter-panel" data-painter="cake" aria-labelledby="cakeHeading">
+          <div class="section-heading">
+            <p class="section-kicker" data-role="kicker">[ кикер рисовалки ]</p>
+            <h2 id="cakeHeading" data-role="title">[ заголовок рисовалки ]</h2>
+            <p class="section-note" data-role="note">[ описание рисовалки ]</p>
+          </div>
+          <div class="painter-layout">
+            <div class="painter-stage">
+              <canvas
+                class="painter-canvas"
+                data-role="canvas"
+                width="360"
+                height="420"
+              ></canvas>
             </div>
-            <div class="calendar-grid" id="calendarGrid"></div>
-            <div class="calendar-dropdown" id="calendarDropdown">
-              <p class="calendar-dropdown-label" id="calendarDropdownLabel">[ подпись списка ]</p>
-              <div class="calendar-content" id="calendarContent"></div>
-            </div>
-        </section>
+            <div class="painter-tools">
+              <div class="tool-group">
+                <p class="tool-label">Режим</p>
+                <div class="segmented-controls" data-role="mode-controls">
+                  <button class="mode-button" type="button" data-mode="brush">Кисть</button>
+                  <button class="mode-button" type="button" data-mode="eraser">Ластик</button>
+                  <button class="mode-button" type="button" data-mode="text">Текст</button>
+                  <button class="mode-button" type="button" data-mode="sprinkle">Посыпка</button>
+                </div>
+              </div>
 
+              <div class="tool-group">
+                <p class="tool-label">Цвет</p>
+                <div class="palette-grid" data-role="color-palette"></div>
+                <label class="color-custom">
+                  <span>Свой цвет</span>
+                  <input data-role="color-input" type="color" value="#fff0a8" />
+                </label>
+              </div>
+
+              <div class="tool-group">
+                <p class="tool-label">Пожелание</p>
+                <label class="text-custom">
+                  <textarea
+                    class="text-input"
+                    data-role="text-input"
+                    rows="3"
+                    maxlength="120"
+                    placeholder="Введите пожелание и в режиме &quot;Текст&quot; нажмите по открытке"
+                  ></textarea>
+                </label>
+              </div>
+
+              <div class="tool-group">
+                <p class="tool-label">Посыпка</p>
+                <div class="emoji-grid" data-role="emoji-palette"></div>
+              </div>
+
+              <div class="tool-actions">
+                <button class="ghost-button" data-action="clear" type="button">Очистить</button>
+                <button class="primary-button" data-action="download" type="button">Скачать JPG</button>
+              </div>
+
+              <p class="tool-status" data-role="status">[ статус ]</p>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer class="site-footer">

@@ -2,311 +2,172 @@ const content = {
   header: {
     eyebrow: "Экстренное сезонное оповещение",
     title: "Пасхальная сводка инцидентов от Voxtek",
-    greeting: "Доброе утро, грешники! Руководство на этой неделе объявило доброту обязательной.",
+    greeting: "Доброе утро, грешники. Сегодня редакция спрятала новости и выдала художественные принадлежности.",
     copy:
-      "Над Пентаграмм-сити дрейфуют гигантские пасхальные гача-шары: глянцевые, пастельные и подозрительно щедрые на странные призы.",
+      "Вместо сводок и кубиков вам официально разрешено заняться чем-то подозрительно мирным: раскрасить яйцо и кулич.",
   },
   briefing: {
     kicker: "Что вообще происходит?",
-    title: "🐰 Пасхальная неделя уже началась",
+    title: "🎨 Пасхальная мастерская открыта",
     lead:
-      "Добро пожаловать в самую странную неделю в вашей (не)жизни. Да, это ивент. Он длится ровно 7 дней.",
+      "Сегодня всё просто: никаких новостных блоков, никаких бросков. Только две заготовки, немного цвета, эмодзи-посыпка и право сохранить результат себе.",
     sections: [
       {
-        title: "📅 Лор события",
+        title: "🥚 Заготовка яйца",
         lines: [
-          "Каждый день на сайте будут появляться новые события.",
-          "Милые. Добродетельные. Очаровательные.",
-          "И, что хуже всего, вам придётся в них участвовать.",
+          "Яйцо раскрашивается кистью строго внутри контура.",
+          "Если увести палец за край, краска туда не попадёт.",
         ],
       },
       {
-        title: "🎲 Как это работает?",
+        title: "🍞 Заготовка кулича",
         lines: [
-          "Кидаете кубик через Кая в беседе.",
-          "Смотрите результат.",
-          "Живёте с последствиями.",
-          "Никаких отмен. Никаких переговоров. Примите. Это уже произошло.",
+          "Кулич тоже можно перекрашивать и засыпать посыпкой.",
+          "Подойдут и пастельные оттенки, и откровенно подозрительные сочетания.",
         ],
       },
       {
-        title: "🥚 Система событий",
+        title: "💾 Сохранение",
         fullWidth: true,
         lines: [
-          "Поскольку вашего покорного ведущего хлебом не корми - дай распаковать адвент-календарь, каждый день будет открываться новый блок, только вместо шоколада вас ждут моральные испытания.",
-          "Следите за обновлениями. Вы не захотите пропустить, что с вами сделают завтра.",
+          "У каждой рисовалки есть отдельная кнопка экспорта в JPG.",
+          "Можно очищать холст, выбирать свой цвет и накидывать эмодзи-посыпку сколько угодно.",
         ],
       },
     ],
     noteTitle: "💗 Важно",
     note:
-      "Все события направлены на... улучшение вас. Сопротивление допустимо. Впрочем, еще и бесполезно. Можете никак не взаимодейстовать с этими испытаниями, но мы не гарантируем, что это не повлияет на вас.",
+      "Никто не оценит ваши художественные решения. Возможно. Но на всякий случай делайте красиво.",
   },
-  calendar: {
-    kicker: "Пасхальный адвент",
-    title: "Сегодня открыт четвёртый набор",
-    copy:
-      "Нажмите на доступную капсулу, чтобы раскрыть содержимое четвёртого дня. Сегодня внутри лежат эффекты, связанные с пасхальными гача-шарами и тем, что они роняют на город.",
-    dropdownLabel: "Содержимое набора 04",
-    slots: [
-      {
-        id: "set-01",
-        label: "Набор 01",
-        meta: "Запечатано",
-        state: "locked",
-      },
-      {
-        id: "set-02",
-        label: "Набор 02",
-        meta: "Запечатано",
-        state: "locked",
-      },
-      {
-        id: "set-03",
-        label: "Набор 03",
-        meta: "Запечатано",
-        state: "locked",
-      },
-      {
-        id: "set-04",
-        label: "Набор 04",
-        meta: "Четверг • открыть",
-        state: "open",
-      },
-      {
-        id: "set-05",
-        label: "Набор 05",
-        meta: "Запечатано",
-        state: "locked",
-      },
-      {
-        id: "set-06",
-        label: "Набор 06",
-        meta: "Запечатано",
-        state: "locked",
-      },
-      {
-        id: "set-07",
-        label: "Набор 07",
-        meta: "Запечатано",
-        state: "locked",
-      },
-      {
-        id: "set-08",
-        label: "Набор 08",
-        meta: "Запечатано",
-        state: "locked",
-      },
+  studio: {
+    kicker: "Творческая эвакуация",
+    title: "Сегодня вместо сводок две рисовалки",
+    note:
+      "Выбирайте цвет, переключайтесь между кистью и посыпкой, а потом скачивайте результат в JPG прямо с телефона.",
+    pills: [
+      "🥚 Яйцо не выпускает кисть за контур",
+      "🍞 Кулич терпит любые оттенки",
+      "✨ Посыпка ставится по клику",
+      "💾 Обе работы скачиваются в JPG",
     ],
-    days: {
-      "set-02": {
-        type: "download",
-        dropdownLabel: "Содержимое набора 02",
-        title: "Скачайте одно пасхальное изображение",
-        copy:
-          "Нажмите на кнопку ниже, и сайт случайным образом выдаст одну из картинок из сегодняшнего набора. Файл скачается в оригинальном JPG без сжатия.",
-        buttonLabel: "Скачать случайную картинку",
-        successPrefix: "Скачивание запущено:",
-        images: [
-          "images/IMG_9435.JPG",
-          "images/IMG_9436.JPG",
-          "images/IMG_9437.JPG",
-          "images/IMG_9438.JPG",
-          "images/IMG_9439.JPG",
-          "images/IMG_9440.JPG",
-          "images/IMG_9441.JPG",
-          "images/IMG_9444.JPG",
-          "images/IMG_9445.JPG",
-          "images/IMG_9447.JPG",
-          "images/IMG_9448.JPG",
-          "images/IMG_9449.JPG",
-          "images/IMG_9450.JPG",
-          "images/IMG_9451.JPG",
-        ],
-      },
+  },
+  painters: {
+    egg: {
+      kicker: "Рисовалка 01",
+      title: "Пасхальное яйцо",
+      note:
+        "Кисть работает только внутри формы. Посыпки здесь нет, зато есть ластик, который возвращает исходную заготовку.",
+      clearLabel: "Очистить яйцо",
+      downloadLabel: "Скачать яйцо в JPG",
+      filename: "paschalnoe-yaitso.jpg",
+      shape: "egg",
+      allowSprinkles: false,
+      allowEraser: true,
+      allowText: true,
+      baseFill: "#fff6ef",
+      accent: "#ffc6df",
+      initialColor: "#ffc6df",
+      brushSize: 18,
+      canvasLabel: "Рисовалка пасхального яйца",
+      statusBrush: "Ведите пальцем внутри яйца, чтобы раскрашивать его по контуру.",
+      statusEraser: "Ведите пальцем по яйцу, чтобы стереть цвет и вернуть исходную заготовку.",
+      statusText: "Введите пожелание и нажмите по открытке, чтобы поставить подпись.",
+      statusSprinkle: "Нажмите внутри яйца, чтобы добавить выбранную посыпку.",
+    },
+    cake: {
+      kicker: "Рисовалка 02",
+      title: "Пасхальный кулич",
+      note:
+        "Раскрашивайте кулич, добавляйте глазурную драму и накидывайте эмодзи-посыпку поверх.",
+      clearLabel: "Очистить кулич",
+      downloadLabel: "Скачать кулич в JPG",
+      filename: "paschalnyi-kulich.jpg",
+      shape: "cake",
+      allowSprinkles: true,
+      allowEraser: false,
+      allowText: true,
+      baseFill: "#f6e2c4",
+      accent: "#fff0a8",
+      initialColor: "#fff0a8",
+      brushSize: 20,
+      canvasLabel: "Рисовалка пасхального кулича",
+      statusBrush: "Ведите пальцем внутри кулича, чтобы перекрашивать его части.",
+      statusText: "Введите пожелание и нажмите по открытке, чтобы добавить текст.",
+      statusSprinkle: "Нажмите по куличу, чтобы добавить выбранную посыпку.",
     },
   },
-  sections: {
-    newsKicker: "Лента дня",
-    newsTitle: "Новости дня",
-    newsNote:
-      "Эти новости не рандомные: всё связано с происходящими событиями, и с ними можно и нужно взаимодействовать.",
-    diceKicker: "Проверка результатов",
-    diceTitle: "Результат броска",
-  },
-  news: [
-    {
-      icon: "🐇",
-      title: "Уровень доброты превышает прогнозируемые показатели",
-      text: [
-        "Аналитики Voxtek подтверждают: агрессивный фон города снизился на 14,7%. Жители чаще улыбаются, извиняются за случайные столкновения и даже придерживают двери.",
-        "Причины неясны, но корреляция с появлением пасхальных объектов очевидна.",
-        "Рекомендовано не сопротивляться — это только усиливает эффект.",
-      ],
-    },
-    {
-      icon: "🥚",
-      title: "Пасхальные яйца проявляют коллективный разум",
-      text: [
-        "Ранее разрозненные объекты начали образовывать устойчивые группы. Очевидцы сообщают, что яйца «перекатываются друг к другу» и формируют фигуры, напоминающие стрелки или буквы.",
-        "Одно из скоплений у входа в отель Hazbin сложилось в слово «ПОМОГИТЕ».",
-        "Сотрудники отеля отрицают причастность.",
-      ],
-    },
-    {
-      icon: "🎈",
-      title: "В небе над городом замечены Гача-боллсы",
-      text: [
-        "Этим утром в воздушном пространстве Пентаграм-сити появились сотни крупных шаров пастельных оттенков. Они парят на высоте 1–2 метра, хаотично сталкиваются и иногда роняют мелкие предметы: конфеты, блёстки, записки, а в одном случае — живого цыплёнка.",
-        "Любой желающий может подойти и «поймать» шар, чтобы получить случайный приз.",
-        "Voxtek не комментирует происхождение объектов, но напоминает: всё, что выпадет из шара, остаётся у вас.",
-      ],
-    },
+  palette: [
+    "#ffc6df",
+    "#fff0a8",
+    "#c7ecff",
+    "#f5f7fb",
+    "#ff9ed1",
+    "#ffd36e",
+    "#77e7ff",
+    "#c2ff56",
+    "#f6b38c",
+    "#cab0ff",
   ],
-  dice: {
-    label: "Выберите бросок:",
-    helper: "Укажите любое значение от 1 до 20, чтобы увидеть ровно один исход события.",
-    quickPicks: [1, 5, 10, 15, 20],
-    ranges: [
-      {
-        min: 1,
-        max: 5,
-        badge: "Диапазон 1-5",
-        icon: "🐰",
-        title: "Мягкое влияние",
-        text:
-          "Вы чувствуете лёгкое желание поймать один из шаров. Вы можете сопротивляться, но тогда остаток дня будете думать: «А что бы мне выпало?». Лучше просто сходить и взять.",
-      },
-      {
-        min: 6,
-        max: 10,
-        badge: "Диапазон 6-10",
-        icon: "🥚",
-        title: "Небесный приз",
-        text:
-          "Вам удаётся поймать шар. Из него выпадает: свёрток с предсказанием, пасхальная конфета или маленькая игрушка. Что бы это ни было, оно кажется вам невероятно важным. Сохраните до конца дня.",
-      },
-      {
-        min: 11,
-        max: 15,
-        badge: "Диапазон 11-15",
-        icon: "🧸",
-        title: "Эффект кача-боллса",
-        text:
-          "Вы дотрагиваетесь до шара, и он взрывается фонтаном блёсток. Теперь вы покрыты мерцающей пыльцой, которая не смывается до вечера. Окружающие реагируют по-разному: от умиления до зависти. Вам придётся с этим жить.",
-      },
-      {
-        min: 16,
-        max: 20,
-        badge: "Диапазон 16-20",
-        icon: "🍞",
-        title: "Счастливый улов",
-        text:
-          "Из пойманного вами шара выпадает маленькая золотая коробочка. Она тёплая и слегка вибрирует. Вы не знаете, что внутри, но чувствуете: открывать её нужно в правильный момент. Пока просто носите с собой и ловите заинтересованные взгляды.",
-      },
-    ],
-  },
+  sprinkles: ["✨", "🌸", "💖", "⭐", "🍬", "🫧", "🐣", "🧁", "🍓", "💫"],
   footer: {
     message: "Хорошего дня. Это не угроза. Наверное.",
     hotline: "Горячая линия Voxtek: +666 (666) 666",
   },
 };
 
-const dateChip = document.getElementById("dateChip");
-const heroEyebrow = document.getElementById("heroEyebrow");
-const heroTitle = document.getElementById("heroTitle");
-const greetingLine = document.getElementById("greetingLine");
-const heroCopy = document.getElementById("heroCopy");
-const briefingKicker = document.getElementById("briefingKicker");
-const briefingTitle = document.getElementById("briefingTitle");
-const briefingLead = document.getElementById("briefingLead");
-const briefingGrid = document.getElementById("briefingGrid");
-const briefingNote = document.getElementById("briefingNote");
-const newsKicker = document.getElementById("newsKicker");
-const newsHeading = document.getElementById("newsHeading");
-const newsNote = document.getElementById("newsNote");
-const diceKicker = document.getElementById("diceKicker");
-const diceHeading = document.getElementById("diceHeading");
-const diceLabel = document.getElementById("diceLabel");
-const diceLabelText = document.getElementById("diceLabelText");
-const diceHelper = document.getElementById("diceHelper");
-const newsFeed = document.getElementById("newsFeed");
-const diceRange = document.getElementById("diceRange");
-const diceValue = document.getElementById("diceValue");
-const diceQuickPicks = document.getElementById("diceQuickPicks");
-const diceResult = document.getElementById("diceResult");
-const calendarKicker = document.getElementById("calendarKicker");
-const calendarHeading = document.getElementById("calendarHeading");
-const calendarCopy = document.getElementById("calendarCopy");
-const calendarGrid = document.getElementById("calendarGrid");
-const calendarDropdown = document.getElementById("calendarDropdown");
-const calendarDropdownLabel = document.getElementById("calendarDropdownLabel");
-const calendarContent = document.getElementById("calendarContent");
-const footerMessage = document.getElementById("footerMessage");
-const footerHotline = document.getElementById("footerHotline");
-let calendarOpenButton = null;
-let calendarOpenSlotId = null;
+const refs = {
+  dateChip: document.getElementById("dateChip"),
+  heroEyebrow: document.getElementById("heroEyebrow"),
+  heroTitle: document.getElementById("heroTitle"),
+  greetingLine: document.getElementById("greetingLine"),
+  heroCopy: document.getElementById("heroCopy"),
+  briefingKicker: document.getElementById("briefingKicker"),
+  briefingTitle: document.getElementById("briefingTitle"),
+  briefingLead: document.getElementById("briefingLead"),
+  briefingGrid: document.getElementById("briefingGrid"),
+  briefingNote: document.getElementById("briefingNote"),
+  studioKicker: document.getElementById("studioKicker"),
+  studioHeading: document.getElementById("studioHeading"),
+  studioNote: document.getElementById("studioNote"),
+  studioPills: document.getElementById("studioPills"),
+  footerMessage: document.getElementById("footerMessage"),
+  footerHotline: document.getElementById("footerHotline"),
+};
+
+const painterStates = [];
 
 function formatDate() {
-  const now = new Date();
   return new Intl.DateTimeFormat("ru-RU", {
     weekday: "long",
     month: "long",
     day: "numeric",
-  }).format(now);
+  }).format(new Date());
 }
 
-function getOutcome(value) {
-  return content.dice.ranges.find((range) => value >= range.min && value <= range.max);
-}
-
-function getRangeValue(range) {
-  return Math.ceil((range.min + range.max) / 2);
-}
-
-function getRandomItem(items) {
-  return items[Math.floor(Math.random() * items.length)];
-}
-
-function triggerFileDownload(filePath, fileName) {
-  const link = document.createElement("a");
-  link.href = filePath;
-  link.download = fileName;
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-}
-
-function renderHeader() {
+function renderStaticContent() {
   document.title = content.header.title;
-  dateChip.textContent = formatDate();
-  heroEyebrow.textContent = content.header.eyebrow;
-  heroTitle.textContent = content.header.title;
-  heroTitle.dataset.text = content.header.title;
-  greetingLine.textContent = content.header.greeting;
-  heroCopy.textContent = content.header.copy;
-  briefingKicker.textContent = content.briefing.kicker;
-  briefingTitle.textContent = content.briefing.title;
-  briefingLead.textContent = content.briefing.lead;
-  briefingNote.textContent = `${content.briefing.noteTitle} ${content.briefing.note}`;
-  newsKicker.textContent = content.sections.newsKicker;
-  newsHeading.textContent = content.sections.newsTitle;
-  newsNote.textContent = content.sections.newsNote;
-  diceKicker.textContent = content.sections.diceKicker;
-  diceHeading.textContent = content.sections.diceTitle;
-  diceLabel.setAttribute("aria-label", content.dice.label);
-  diceLabelText.textContent = content.dice.label;
-  diceHelper.textContent = content.dice.helper;
-  calendarKicker.textContent = content.calendar.kicker;
-  calendarHeading.textContent = content.calendar.title;
-  calendarCopy.textContent = content.calendar.copy;
-  calendarDropdownLabel.textContent = content.calendar.dropdownLabel;
-  footerMessage.textContent = content.footer.message;
-  footerHotline.textContent = content.footer.hotline;
+  refs.dateChip.textContent = formatDate();
+  refs.heroEyebrow.textContent = content.header.eyebrow;
+  refs.heroTitle.textContent = content.header.title;
+  refs.heroTitle.dataset.text = content.header.title;
+  refs.greetingLine.textContent = content.header.greeting;
+  refs.heroCopy.textContent = content.header.copy;
+
+  refs.briefingKicker.textContent = content.briefing.kicker;
+  refs.briefingTitle.textContent = content.briefing.title;
+  refs.briefingLead.textContent = content.briefing.lead;
+  refs.briefingNote.textContent = `${content.briefing.noteTitle} ${content.briefing.note}`;
+
+  refs.studioKicker.textContent = content.studio.kicker;
+  refs.studioHeading.textContent = content.studio.title;
+  refs.studioNote.textContent = content.studio.note;
+
+  refs.footerMessage.textContent = content.footer.message;
+  refs.footerHotline.textContent = content.footer.hotline;
 }
 
 function renderBriefing() {
-  briefingGrid.innerHTML = "";
+  refs.briefingGrid.innerHTML = "";
 
   content.briefing.sections.forEach((section) => {
     const card = document.createElement("article");
@@ -315,255 +176,654 @@ function renderBriefing() {
       <h3>${section.title}</h3>
       ${section.lines.map((line) => `<p>${line}</p>`).join("")}
     `;
-    briefingGrid.appendChild(card);
+    refs.briefingGrid.appendChild(card);
   });
 }
 
-function renderNews() {
-  newsFeed.innerHTML = "";
+function renderStudioPills() {
+  refs.studioPills.innerHTML = "";
 
-  content.news.forEach((item) => {
-    const card = document.createElement("article");
-    card.className = "news-card";
-    card.innerHTML = `
-      <div class="news-icon" aria-hidden="true">${item.icon}</div>
-      <div class="news-body">
-        <h3>${item.title}</h3>
-        ${item.text.map((paragraph) => `<p>${paragraph}</p>`).join("")}
-      </div>
-    `;
-    newsFeed.appendChild(card);
+  content.studio.pills.forEach((label) => {
+    const pill = document.createElement("span");
+    pill.className = "studio-pill";
+    pill.textContent = label;
+    refs.studioPills.appendChild(pill);
   });
 }
 
-function renderQuickPicks() {
-  diceQuickPicks.innerHTML = "";
-
-  content.dice.quickPicks.forEach((value) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "quick-pick";
-    button.textContent = value;
-    button.addEventListener("click", () => {
-      diceRange.value = value;
-      updateDiceResult(value);
-    });
-    diceQuickPicks.appendChild(button);
-  });
+function buildEggPath(width, height) {
+  const path = new Path2D();
+  path.moveTo(width * 0.5, height * 0.12);
+  path.bezierCurveTo(width * 0.28, height * 0.08, width * 0.12, height * 0.28, width * 0.14, height * 0.55);
+  path.bezierCurveTo(width * 0.16, height * 0.79, width * 0.3, height * 0.92, width * 0.5, height * 0.94);
+  path.bezierCurveTo(width * 0.7, height * 0.92, width * 0.84, height * 0.79, width * 0.86, height * 0.55);
+  path.bezierCurveTo(width * 0.88, height * 0.28, width * 0.72, height * 0.08, width * 0.5, height * 0.12);
+  path.closePath();
+  return path;
 }
 
-function setCalendarDropdownState(isOpen) {
-  calendarDropdown.classList.toggle("is-open", isOpen);
-
-  if (calendarOpenButton) {
-    calendarOpenButton.classList.toggle("is-expanded", isOpen);
-    calendarOpenButton.setAttribute("aria-expanded", String(isOpen));
-  }
+function buildCakePath(width, height) {
+  const path = new Path2D();
+  path.moveTo(width * 0.24, height * 0.34);
+  path.bezierCurveTo(width * 0.23, height * 0.22, width * 0.34, height * 0.15, width * 0.46, height * 0.2);
+  path.bezierCurveTo(width * 0.52, height * 0.13, width * 0.62, height * 0.15, width * 0.67, height * 0.23);
+  path.bezierCurveTo(width * 0.8, height * 0.18, width * 0.84, height * 0.29, width * 0.8, height * 0.39);
+  path.lineTo(width * 0.74, height * 0.87);
+  path.lineTo(width * 0.26, height * 0.87);
+  path.closePath();
+  return path;
 }
 
-function syncCalendarSelection(value) {
-  if (!calendarContent.querySelector(".calendar-event")) {
-    return;
-  }
-
-  const numericValue = Number(value);
-  const activeIndex = content.dice.ranges.findIndex(
-    (range) => numericValue >= range.min && numericValue <= range.max,
-  );
-
-  calendarContent.querySelectorAll(".calendar-event").forEach((button) => {
-    button.classList.toggle("is-selected", Number(button.dataset.rangeIndex) === activeIndex);
-  });
+function buildCakeIcingPath(width, height) {
+  const path = new Path2D();
+  path.moveTo(width * 0.26, height * 0.34);
+  path.bezierCurveTo(width * 0.28, height * 0.2, width * 0.42, height * 0.17, width * 0.48, height * 0.24);
+  path.bezierCurveTo(width * 0.54, height * 0.16, width * 0.66, height * 0.18, width * 0.72, height * 0.28);
+  path.bezierCurveTo(width * 0.76, height * 0.22, width * 0.83, height * 0.25, width * 0.8, height * 0.38);
+  path.bezierCurveTo(width * 0.73, height * 0.43, width * 0.72, height * 0.47, width * 0.7, height * 0.52);
+  path.bezierCurveTo(width * 0.67, height * 0.47, width * 0.64, height * 0.43, width * 0.62, height * 0.5);
+  path.bezierCurveTo(width * 0.6, height * 0.58, width * 0.53, height * 0.58, width * 0.5, height * 0.49);
+  path.bezierCurveTo(width * 0.48, height * 0.42, width * 0.42, height * 0.42, width * 0.4, height * 0.5);
+  path.bezierCurveTo(width * 0.37, height * 0.58, width * 0.3, height * 0.55, width * 0.28, height * 0.44);
+  path.bezierCurveTo(width * 0.26, height * 0.39, width * 0.24, height * 0.37, width * 0.26, height * 0.34);
+  path.closePath();
+  return path;
 }
 
-async function downloadRandomImage(imageList, statusNode, successPrefix) {
-  if (!imageList.length) {
-    statusNode.textContent = "Изображения для скачивания пока не добавлены.";
-    return;
+function getShapePath(shape, width, height) {
+  if (shape === "egg") {
+    return buildEggPath(width, height);
   }
 
-  const imagePath = getRandomItem(imageList);
-  const fileName = imagePath.split("/").pop();
-
-  statusNode.textContent = "Готовим файл...";
-
-  try {
-    const response = await fetch(imagePath);
-
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
-
-    const blob = await response.blob();
-    const objectUrl = URL.createObjectURL(blob);
-    triggerFileDownload(objectUrl, fileName);
-    window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
-    statusNode.textContent = `${successPrefix} ${fileName}`;
-  } catch (error) {
-    try {
-      triggerFileDownload(imagePath, fileName);
-      statusNode.textContent = `${successPrefix} ${fileName}`;
-    } catch (fallbackError) {
-      statusNode.textContent = "Не удалось скачать картинку. Попробуйте ещё раз.";
-    }
-  }
+  return buildCakePath(width, height);
 }
 
-function renderCalendarEvents() {
-  calendarContent.innerHTML = "";
+function getNormalizedPoint(event, painter) {
+  const rect = painter.canvas.getBoundingClientRect();
+  const x = ((event.clientX - rect.left) / rect.width) * painter.width;
+  const y = ((event.clientY - rect.top) / rect.height) * painter.height;
 
-  content.dice.ranges.forEach((range, index) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "calendar-event";
-    button.dataset.rangeIndex = index;
-    button.innerHTML = `
-      <span class="calendar-event-range">${range.badge}</span>
-      <span class="calendar-event-title">${range.title}</span>
-      <span class="calendar-event-copy">${range.text}</span>
-    `;
-    button.addEventListener("click", () => {
-      const value = getRangeValue(range);
-      diceRange.value = value;
-      updateDiceResult(value);
-    });
-    calendarContent.appendChild(button);
-  });
+  return {
+    x,
+    y,
+    nx: x / painter.width,
+    ny: y / painter.height,
+  };
 }
 
-function renderCalendarDownload(dayContent) {
-  calendarContent.innerHTML = "";
-
-  const card = document.createElement("article");
-  card.className = "calendar-action";
-  card.innerHTML = `
-    <h3 class="calendar-action-title">${dayContent.title}</h3>
-    <p class="calendar-action-copy">${dayContent.copy}</p>
-    <button class="calendar-action-button" type="button">${dayContent.buttonLabel}</button>
-    <p class="calendar-action-status" aria-live="polite"></p>
-  `;
-
-  const actionButton = card.querySelector(".calendar-action-button");
-  const statusNode = card.querySelector(".calendar-action-status");
-
-  actionButton.addEventListener("click", async () => {
-    actionButton.disabled = true;
-    await downloadRandomImage(dayContent.images, statusNode, dayContent.successPrefix);
-    actionButton.disabled = false;
-  });
-
-  calendarContent.appendChild(card);
+function isInsideShape(painter, point) {
+  const path = getShapePath(painter.config.shape, painter.width, painter.height);
+  return painter.ctx.isPointInPath(path, point.x, point.y);
 }
 
-function renderCalendarContent(slotId) {
-  const dayContent = content.calendar.days[slotId];
-
-  if (!dayContent) {
-    renderCalendarEvents();
-    calendarDropdownLabel.textContent = content.calendar.dropdownLabel;
-    syncCalendarSelection(diceRange.value);
-    return;
+function getDefaultStatus(painter) {
+  if (painter.mode === "eraser") {
+    return painter.config.statusEraser || painter.config.statusBrush;
   }
 
-  calendarDropdownLabel.textContent = dayContent.dropdownLabel || content.calendar.dropdownLabel;
-
-  if (dayContent.type === "download") {
-    renderCalendarDownload(dayContent);
-    return;
+  if (painter.mode === "text") {
+    return painter.config.statusText || painter.config.statusBrush;
   }
 
-  renderCalendarEvents();
-  syncCalendarSelection(diceRange.value);
+  return painter.mode === "brush" ? painter.config.statusBrush : painter.config.statusSprinkle;
 }
 
-function renderCalendar() {
-  calendarGrid.innerHTML = "";
-  calendarContent.innerHTML = "";
-  calendarOpenButton = null;
-  calendarOpenSlotId = null;
+function setPainterStatus(painter, text) {
+  painter.statusNode.textContent = text || getDefaultStatus(painter);
+}
 
-  content.calendar.slots.forEach((slot) => {
-    if (slot.state === "open") {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "calendar-tile calendar-tile--open";
-      button.setAttribute("aria-controls", "calendarDropdown");
-      button.setAttribute("aria-expanded", "false");
-      button.innerHTML = `
-        <strong>${slot.label}</strong>
-        <span>${slot.meta}</span>
-      `;
-      button.addEventListener("click", () => {
-        const isOpen = !calendarDropdown.classList.contains("is-open");
-        setCalendarDropdownState(isOpen);
-      });
-      calendarOpenButton = button;
-      calendarOpenSlotId = slot.id;
-      calendarGrid.appendChild(button);
+function drawStageBackground(ctx, width, height, accent) {
+  ctx.clearRect(0, 0, width, height);
+
+  const gradient = ctx.createLinearGradient(0, 0, width, height);
+  gradient.addColorStop(0, "#10141e");
+  gradient.addColorStop(1, "#0b0b0f");
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, width, height);
+
+  const glow = ctx.createRadialGradient(width * 0.3, height * 0.2, 10, width * 0.3, height * 0.2, width * 0.7);
+  glow.addColorStop(0, `${accent}33`);
+  glow.addColorStop(1, "rgba(0, 0, 0, 0)");
+  ctx.fillStyle = glow;
+  ctx.fillRect(0, 0, width, height);
+}
+
+function drawShapeBase(painter, ctx, width, height) {
+  const shapePath = getShapePath(painter.config.shape, width, height);
+
+  ctx.save();
+  ctx.fillStyle = "rgba(0, 0, 0, 0.22)";
+  ctx.beginPath();
+
+  if (painter.config.shape === "egg") {
+    ctx.ellipse(width * 0.5, height * 0.92, width * 0.2, height * 0.04, 0, 0, Math.PI * 2);
+  } else {
+    ctx.ellipse(width * 0.5, height * 0.9, width * 0.25, height * 0.05, 0, 0, Math.PI * 2);
+  }
+
+  ctx.fill();
+  ctx.restore();
+
+  ctx.save();
+  ctx.fillStyle = painter.config.baseFill;
+  ctx.fill(shapePath);
+
+  if (painter.config.shape === "egg") {
+    const highlight = ctx.createLinearGradient(width * 0.35, height * 0.12, width * 0.65, height * 0.88);
+    highlight.addColorStop(0, "rgba(255,255,255,0.58)");
+    highlight.addColorStop(0.45, "rgba(255,255,255,0)");
+    highlight.addColorStop(1, "rgba(255,198,223,0.12)");
+    ctx.fillStyle = highlight;
+    ctx.fill(shapePath);
+  } else {
+    const icingPath = buildCakeIcingPath(width, height);
+    ctx.fillStyle = "#fff7fa";
+    ctx.fill(icingPath);
+  }
+
+  ctx.restore();
+}
+
+function drawStrokeLayer(painter, ctx, width, height) {
+  const shapePath = getShapePath(painter.config.shape, width, height);
+  const layerCanvas = document.createElement("canvas");
+  const layerCtx = layerCanvas.getContext("2d");
+  layerCanvas.width = width;
+  layerCanvas.height = height;
+
+  layerCtx.save();
+  layerCtx.clip(shapePath);
+
+  painter.strokes.forEach((stroke) => {
+    if (!stroke.points.length) {
       return;
     }
 
-    const tile = document.createElement("div");
-    tile.className = "calendar-tile calendar-tile--locked";
-    tile.setAttribute("aria-hidden", "true");
-    tile.innerHTML = `
-      <strong>${slot.label}</strong>
-      <span>🔒 ${slot.meta}</span>
-    `;
-    calendarGrid.appendChild(tile);
+    layerCtx.beginPath();
+    layerCtx.lineCap = "round";
+    layerCtx.lineJoin = "round";
+    layerCtx.strokeStyle = stroke.color;
+    layerCtx.lineWidth = (stroke.size / painter.width) * width;
+    layerCtx.globalCompositeOperation = stroke.mode === "eraser" ? "destination-out" : "source-over";
+
+    stroke.points.forEach((point, index) => {
+      const px = point.x * width;
+      const py = point.y * height;
+
+      if (index === 0) {
+        layerCtx.moveTo(px, py);
+      } else {
+        layerCtx.lineTo(px, py);
+      }
+    });
+
+    if (stroke.points.length === 1) {
+      const dot = stroke.points[0];
+      layerCtx.arc(dot.x * width, dot.y * height, layerCtx.lineWidth / 2, 0, Math.PI * 2);
+      layerCtx.fillStyle = stroke.color;
+      layerCtx.fill();
+    } else {
+      layerCtx.stroke();
+    }
   });
 
-  renderCalendarContent(calendarOpenSlotId);
+  layerCtx.restore();
+  ctx.drawImage(layerCanvas, 0, 0, width, height);
+
+  ctx.save();
+  ctx.clip(shapePath);
+
+  const fontSize = painter.config.shape === "egg" ? Math.round(width * 0.09) : Math.round(width * 0.08);
+
+  painter.sprinkles.forEach((sprinkle) => {
+    ctx.save();
+    ctx.translate(sprinkle.x * width, sprinkle.y * height);
+    ctx.rotate(sprinkle.rotation);
+    ctx.font = `${Math.round(fontSize * sprinkle.scale)}px "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif`;
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(sprinkle.emoji, 0, 0);
+    ctx.restore();
+  });
+
+  ctx.restore();
 }
 
-function syncQuickPicks(value) {
-  const quickButtons = diceQuickPicks.querySelectorAll(".quick-pick");
-  quickButtons.forEach((button) => {
-    button.classList.toggle("is-active", Number(button.textContent) === value);
+function drawShapeOutline(painter, ctx, width, height) {
+  const shapePath = getShapePath(painter.config.shape, width, height);
+
+  ctx.save();
+  ctx.strokeStyle = "rgba(255, 255, 255, 0.9)";
+  ctx.lineWidth = Math.max(4, width * 0.012);
+  ctx.stroke(shapePath);
+
+  ctx.strokeStyle = "rgba(53, 242, 255, 0.28)";
+  ctx.lineWidth = Math.max(2, width * 0.006);
+  ctx.stroke(shapePath);
+
+  if (painter.config.shape === "cake") {
+    const icingPath = buildCakeIcingPath(width, height);
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.75)";
+    ctx.lineWidth = Math.max(3, width * 0.009);
+    ctx.stroke(icingPath);
+  }
+
+  ctx.restore();
+}
+
+function wrapTextLines(ctx, text, maxWidth) {
+  const lines = [];
+  const rawLines = text.split("\n");
+
+  rawLines.forEach((rawLine) => {
+    const words = rawLine.split(/\s+/).filter(Boolean);
+
+    if (!words.length) {
+      lines.push("");
+      return;
+    }
+
+    let currentLine = words[0];
+
+    for (let i = 1; i < words.length; i += 1) {
+      const testLine = `${currentLine} ${words[i]}`;
+
+      if (ctx.measureText(testLine).width <= maxWidth) {
+        currentLine = testLine;
+      } else {
+        lines.push(currentLine);
+        currentLine = words[i];
+      }
+    }
+
+    lines.push(currentLine);
+  });
+
+  return lines;
+}
+
+function drawTextLayer(painter, ctx, width, height) {
+  painter.textItems.forEach((item) => {
+    const fontSize = Math.round(width * item.sizeScale);
+    const maxWidth = width * 0.7;
+    const x = item.x * width;
+    const y = item.y * height;
+
+    ctx.save();
+    ctx.font = `700 ${fontSize}px ${getComputedStyle(document.documentElement).getPropertyValue("--font-body").trim() || "Inter, sans-serif"}`;
+    ctx.textAlign = "center";
+    ctx.textBaseline = "top";
+    ctx.lineJoin = "round";
+    ctx.strokeStyle = "rgba(0, 0, 0, 0.4)";
+    ctx.lineWidth = Math.max(4, fontSize * 0.18);
+    ctx.fillStyle = item.color;
+    ctx.shadowColor = "rgba(0, 0, 0, 0.28)";
+    ctx.shadowBlur = fontSize * 0.25;
+    ctx.shadowOffsetY = 2;
+
+    const lines = wrapTextLines(ctx, item.text, maxWidth);
+    const lineHeight = fontSize * 1.15;
+    const blockHeight = lines.length * lineHeight;
+    let currentY = y - blockHeight / 2;
+
+    lines.forEach((line) => {
+      ctx.strokeText(line, x, currentY, maxWidth);
+      ctx.fillText(line, x, currentY, maxWidth);
+      currentY += lineHeight;
+    });
+
+    ctx.restore();
   });
 }
 
-function updateDiceResult(value) {
-  const numericValue = Number(value);
-  const outcome = getOutcome(numericValue);
+function renderPainter(painter, targetCtx = painter.ctx, width = painter.width, height = painter.height) {
+  drawStageBackground(targetCtx, width, height, painter.config.accent);
+  drawShapeBase(painter, targetCtx, width, height);
+  drawStrokeLayer(painter, targetCtx, width, height);
+  drawShapeOutline(painter, targetCtx, width, height);
+  drawTextLayer(painter, targetCtx, width, height);
+}
 
-  diceValue.textContent = numericValue;
-  syncQuickPicks(numericValue);
-  syncCalendarSelection(numericValue);
+function triggerFileDownload(dataUrl, fileName) {
+  const link = document.createElement("a");
+  link.href = dataUrl;
+  link.download = fileName;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+}
 
-  if (!outcome) {
-    diceResult.innerHTML = "";
+function syncColorPalette(painter) {
+  painter.colorButtons.forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.color === painter.currentColor);
+  });
+
+  painter.colorInput.value = painter.currentColor;
+}
+
+function syncSprinklePalette(painter) {
+  painter.emojiButtons.forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.emoji === painter.currentEmoji);
+  });
+}
+
+function syncModeButtons(painter) {
+  painter.modeButtons.forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.mode === painter.mode);
+  });
+
+  painter.stage.classList.toggle("is-sprinkle-mode", painter.mode === "sprinkle");
+}
+
+function createStroke(painter, point) {
+  const stroke = {
+    color: painter.currentColor,
+    mode: painter.mode,
+    size: painter.config.brushSize,
+    points: [{ x: point.nx, y: point.ny }],
+  };
+
+  painter.strokes.push(stroke);
+  painter.activeStroke = stroke;
+}
+
+function startBrush(painter, point) {
+  if (!isInsideShape(painter, point)) {
+    painter.activeStroke = null;
     return;
   }
 
-  diceResult.classList.remove("is-animating");
-  void diceResult.offsetWidth;
-  diceResult.classList.add("is-animating");
-
-  diceResult.innerHTML = `
-    <div class="dice-result-top">
-      <span class="dice-badge">${outcome.badge}</span>
-      <span aria-hidden="true">${outcome.icon}</span>
-    </div>
-    <h3>${outcome.title}</h3>
-    <p>${outcome.text}</p>
-  `;
+  createStroke(painter, point);
+  renderPainter(painter);
 }
 
-function bindEvents() {
-  diceRange.addEventListener("input", (event) => {
-    updateDiceResult(event.target.value);
+function continueBrush(painter, point) {
+  if (!isInsideShape(painter, point)) {
+    painter.activeStroke = null;
+    return;
+  }
+
+  if (!painter.activeStroke) {
+    createStroke(painter, point);
+  } else {
+    painter.activeStroke.points.push({ x: point.nx, y: point.ny });
+  }
+
+  renderPainter(painter);
+}
+
+function placeSprinkle(painter, point) {
+  if (!isInsideShape(painter, point)) {
+    return;
+  }
+
+  painter.sprinkles.push({
+    x: point.nx,
+    y: point.ny,
+    emoji: painter.currentEmoji,
+    rotation: (Math.random() - 0.5) * 0.8,
+    scale: 0.9 + Math.random() * 0.3,
+  });
+
+  renderPainter(painter);
+}
+
+function placeText(painter, point) {
+  const text = painter.textInput.value.trim();
+
+  if (!text) {
+    setPainterStatus(painter, "Сначала введите пожелание в поле ниже.");
+    return;
+  }
+
+  painter.textItems.push({
+    x: point.nx,
+    y: point.ny,
+    text,
+    color: painter.currentColor,
+    sizeScale: 0.055,
+  });
+
+  renderPainter(painter);
+  setPainterStatus(painter, "Подпись добавлена на открытку.");
+}
+
+function downloadPainterAsJpg(painter) {
+  const exportCanvas = document.createElement("canvas");
+  exportCanvas.width = painter.width * 3;
+  exportCanvas.height = painter.height * 3;
+  const exportCtx = exportCanvas.getContext("2d");
+
+  renderPainter(painter, exportCtx, exportCanvas.width, exportCanvas.height);
+
+  const dataUrl = exportCanvas.toDataURL("image/jpeg", 0.94);
+  triggerFileDownload(dataUrl, painter.config.filename);
+  setPainterStatus(painter, `Файл сохранён: ${painter.config.filename}`);
+}
+
+function clearPainter(painter) {
+  painter.strokes = [];
+  painter.sprinkles = [];
+  painter.textItems = [];
+  painter.activeStroke = null;
+  renderPainter(painter);
+  setPainterStatus(painter, "Холст очищен. Можно начинать заново.");
+}
+
+function bindPainterControls(painter) {
+  painter.modeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (button.dataset.mode === "sprinkle" && !painter.config.allowSprinkles) {
+        return;
+      }
+
+      if (button.dataset.mode === "eraser" && !painter.config.allowEraser) {
+        return;
+      }
+
+      if (button.dataset.mode === "text" && !painter.config.allowText) {
+        return;
+      }
+
+      painter.mode = button.dataset.mode;
+      syncModeButtons(painter);
+      setPainterStatus(painter);
+    });
+  });
+
+  painter.colorButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      painter.currentColor = button.dataset.color;
+      syncColorPalette(painter);
+      setPainterStatus(painter);
+    });
+  });
+
+  painter.colorInput.addEventListener("input", (event) => {
+    painter.currentColor = event.target.value;
+    syncColorPalette(painter);
+    setPainterStatus(painter);
+  });
+
+  painter.emojiButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      painter.currentEmoji = button.dataset.emoji;
+      syncSprinklePalette(painter);
+      setPainterStatus(painter);
+    });
+  });
+
+  painter.clearButton.addEventListener("click", () => clearPainter(painter));
+  painter.downloadButton.addEventListener("click", () => downloadPainterAsJpg(painter));
+
+  painter.canvas.addEventListener("pointerdown", (event) => {
+    event.preventDefault();
+    const point = getNormalizedPoint(event, painter);
+    painter.isDrawing = painter.mode === "brush" || painter.mode === "eraser";
+
+    if (painter.mode === "brush" || painter.mode === "eraser") {
+      startBrush(painter, point);
+    } else if (painter.mode === "text") {
+      placeText(painter, point);
+    } else if (painter.config.allowSprinkles) {
+      placeSprinkle(painter, point);
+    } else {
+      startBrush(painter, point);
+    }
+
+    painter.canvas.setPointerCapture(event.pointerId);
+  });
+
+  painter.canvas.addEventListener("pointermove", (event) => {
+    if (!painter.isDrawing || (painter.mode !== "brush" && painter.mode !== "eraser")) {
+      return;
+    }
+
+    event.preventDefault();
+    continueBrush(painter, getNormalizedPoint(event, painter));
+  });
+
+  const endDrawing = () => {
+    painter.isDrawing = false;
+    painter.activeStroke = null;
+  };
+
+  painter.canvas.addEventListener("pointerup", endDrawing);
+  painter.canvas.addEventListener("pointercancel", endDrawing);
+  painter.canvas.addEventListener("pointerleave", endDrawing);
+}
+
+function renderPalette(container, painter) {
+  container.innerHTML = "";
+
+  content.palette.forEach((color) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "palette-swatch";
+    button.dataset.color = color;
+    button.style.setProperty("--swatch", color);
+    button.setAttribute("aria-label", `Выбрать цвет ${color}`);
+    container.appendChild(button);
+  });
+
+  painter.colorButtons = Array.from(container.querySelectorAll(".palette-swatch"));
+}
+
+function renderSprinkles(container, painter) {
+  container.innerHTML = "";
+
+  content.sprinkles.forEach((emoji) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "emoji-swatch";
+    button.dataset.emoji = emoji;
+    button.textContent = emoji;
+    button.setAttribute("aria-label", `Выбрать посыпку ${emoji}`);
+    container.appendChild(button);
+  });
+
+  painter.emojiButtons = Array.from(container.querySelectorAll(".emoji-swatch"));
+}
+
+function setupPainters() {
+  const sections = document.querySelectorAll(".painter-panel");
+
+  sections.forEach((section) => {
+    const painterId = section.dataset.painter;
+    const config = content.painters[painterId];
+    const canvas = section.querySelector('[data-role="canvas"]');
+    const ctx = canvas.getContext("2d");
+    const modeControls = section.querySelector('[data-role="mode-controls"]');
+    const colorPalette = section.querySelector('[data-role="color-palette"]');
+    const emojiPalette = section.querySelector('[data-role="emoji-palette"]');
+    const colorInput = section.querySelector('[data-role="color-input"]');
+    const textInput = section.querySelector('[data-role="text-input"]');
+    const modeGroup = modeControls.closest(".tool-group");
+    const sprinkleGroup = emojiPalette.closest(".tool-group");
+    const sprinkleModeButton = modeControls.querySelector('[data-mode="sprinkle"]');
+    const eraserModeButton = modeControls.querySelector('[data-mode="eraser"]');
+    const textModeButton = modeControls.querySelector('[data-mode="text"]');
+
+    const painter = {
+      id: painterId,
+      config,
+      section,
+      stage: section.querySelector(".painter-stage"),
+      canvas,
+      ctx,
+      width: canvas.width,
+      height: canvas.height,
+      modeButtons: Array.from(modeControls.querySelectorAll(".mode-button")),
+      colorButtons: [],
+      emojiButtons: [],
+      colorInput,
+      textInput,
+      clearButton: section.querySelector('[data-action="clear"]'),
+      downloadButton: section.querySelector('[data-action="download"]'),
+      statusNode: section.querySelector('[data-role="status"]'),
+      currentColor: config.initialColor,
+      currentEmoji: content.sprinkles[0],
+      mode: "brush",
+      strokes: [],
+      sprinkles: [],
+      textItems: [],
+      activeStroke: null,
+      isDrawing: false,
+    };
+
+    section.querySelector('[data-role="kicker"]').textContent = config.kicker;
+    section.querySelector('[data-role="title"]').textContent = config.title;
+    section.querySelector('[data-role="note"]').textContent = config.note;
+    painter.clearButton.textContent = config.clearLabel;
+    painter.downloadButton.textContent = config.downloadLabel;
+    canvas.setAttribute("aria-label", config.canvasLabel);
+
+    renderPalette(colorPalette, painter);
+
+    if (!config.allowEraser && eraserModeButton) {
+      eraserModeButton.remove();
+      painter.modeButtons = painter.modeButtons.filter((button) => button.dataset.mode !== "eraser");
+    }
+
+    if (!config.allowText && textModeButton) {
+      textModeButton.remove();
+      painter.modeButtons = painter.modeButtons.filter((button) => button.dataset.mode !== "text");
+      textInput.closest(".tool-group").hidden = true;
+    }
+
+    if (config.allowSprinkles) {
+      renderSprinkles(emojiPalette, painter);
+    } else {
+      painter.mode = "brush";
+      if (sprinkleModeButton) {
+        sprinkleModeButton.remove();
+      }
+      sprinkleGroup.hidden = true;
+      painter.modeButtons = painter.modeButtons.filter((button) => button.dataset.mode !== "sprinkle");
+
+      if (painter.modeButtons.length <= 1) {
+        modeGroup.hidden = true;
+      }
+    }
+
+    syncColorPalette(painter);
+    if (config.allowSprinkles) {
+      syncSprinklePalette(painter);
+    }
+    syncModeButtons(painter);
+    setPainterStatus(painter);
+    bindPainterControls(painter);
+    renderPainter(painter);
+
+    painterStates.push(painter);
   });
 }
 
 function init() {
-  renderHeader();
+  renderStaticContent();
   renderBriefing();
-  renderNews();
-  renderQuickPicks();
-  renderCalendar();
-  bindEvents();
-  updateDiceResult(diceRange.value);
+  renderStudioPills();
+  setupPainters();
 }
 
 init();
